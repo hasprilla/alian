@@ -13,7 +13,6 @@ services:
       WORDPRESS_DB_USER: ${WORDPRESS_DB_USER}
       WORDPRESS_DB_PASSWORD: ${WORDPRESS_DB_PASSWORD}
     volumes:
-      - wordpress_data:/var/www/html
       - ./wp-content:/var/www/html/wp-content
     networks:
       - wordpress-net
@@ -48,5 +47,5 @@ networks:
     driver: bridge
 
 volumes:
-  wordpress_data:
   db_data:
+  wp-content:
